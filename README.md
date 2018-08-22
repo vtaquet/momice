@@ -8,7 +8,7 @@ For a full description of the physical and chemical processes included in the mo
 This notice describes the input files needed by GRAINOBLE, how to compile and execute the code, and the routines needed to analyze and visualise the results.
 
 
-1. Input files
+1. INPUT FILES
 
 1.1 input_file.in
 
@@ -128,7 +128,7 @@ This file contains the list of species whose formation and destruction rates wil
 If a spatial evolution has been chosen in input\_parameters.in, the folder and the list of files giving the one-dimensional evolution of the physical conditions have to be specified in this file. The format of the input files follows the format given in the examples located in the "phys" folders. 
 
 
-2. Compilation and execution
+2. COMPILATION AND EXECUTION
 
 To compile the source code: 
 - go to the source directory. 
@@ -136,7 +136,7 @@ To compile the source code:
 - type "./grainoble.gfort" or "/.grainoble.ifort" depending on the selected compiler. 
 
 
-3. Output reading
+3. OUTPUT ANALYSIS AND VISUALISATION
 
 The output files are saved in binary files located in the selected output directory. An IDL code, called GRAN (for GRainoble ANalyzer) is provided in the output directory. It reads and analyzes the binary files, and plots the results in postcript files. To run GRAN, go to the output directory, run IDL and type "GRAN".
 
