@@ -11,21 +11,21 @@ The `instructions` file describes the input files needed by GRAINOBLE, how to co
 
 ### Publications: 
 
-F. Dulieu, T. Nguyen, E. Congiu, S. Baouche, V. Taquet 2019, Efficient formation route of the pre-biotic molecule formamide on interstellar dust grains, MNRAS ([URL](https://academic.oup.com/mnrasl/article/484/1/L119/5305861))
+F. Dulieu, T. Nguyen, E. Congiu, S. Baouche, V. Taquet 2019, *Efficient formation route of the pre-biotic molecule formamide on interstellar dust grains*, **MNRAS**, L119 ([URL](https://academic.oup.com/mnrasl/article/484/1/L119/5305861))
 
-V. Taquet, K. Furuya, C. Walsh, E. F. van Dishoeck 2016, A primordial origin for molecular oxygen in comets: A chemical
-  kinetics study of the formation and survival of O2 ice from clouds to disks, MNRAS, 462, 99 ([URL](http://mnras.oxfordjournals.org/content/462/Suppl_1/S99))
+V. Taquet, K. Furuya, C. Walsh, E. F. van Dishoeck 2016, *A primordial origin for molecular oxygen in comets: A chemical
+  kinetics study of the formation and survival of O2 ice from clouds to disks*, **MNRAS**, 462, 99 ([URL](http://mnras.oxfordjournals.org/content/462/Suppl_1/S99))
   
-V. Taquet, E. Wirstrom, S. B. Charnley 2016, Formation and recondensation of complex organic molecules during 
-  protostellar luminosity outbursts, ApJ, 821, 46 ([URL](http://iopscience.iop.org/article/10.3847/0004-637X/821/1/46/meta))
+V. Taquet, E. Wirstrom, S. B. Charnley 2016, *Formation and recondensation of complex organic molecules during 
+  protostellar luminosity outbursts*, **ApJ**, 821, 46 ([URL](http://iopscience.iop.org/article/10.3847/0004-637X/821/1/46/meta))
   
-V. Taquet, S. B. Charnley, O. Sipilä 2014, Multilayer Formation and Evaporation of Deuterated Ices in
-  Prestellar and Protostellar Cores, ApJ, 791, 1 ([URL](https://iopscience.iop.org/article/10.1088/0004-637X/791/1/1))
+V. Taquet, S. B. Charnley, O. Sipilä 2014, *Multilayer Formation and Evaporation of Deuterated Ices in
+  Prestellar and Protostellar Cores*, **ApJ**, 791, 1 ([URL](https://iopscience.iop.org/article/10.1088/0004-637X/791/1/1))
   
-V. Taquet, P. Peters, C. Kahane, C. Ceccarelli, D. Duflot, C. Toubin, A. Faure, L. Wiesenfeld 2013, Modelling of deuterated water ice formation}, A\&A, 550, A127 ([URL](http://www.aanda.org/articles/aa/abs/2013/02/aa20084-12/aa20084-12.html))
+V. Taquet, P. Peters, C. Kahane, C. Ceccarelli, D. Duflot, C. Toubin, A. Faure, L. Wiesenfeld 2013, *Modelling of deuterated water ice formation*, **A&A**, 550, A127 ([URL](http://www.aanda.org/articles/aa/abs/2013/02/aa20084-12/aa20084-12.html))
 
-V. Taquet, C. Ceccarelli, C. Kahane 2012, Formaldehyde and methanol deuteration in protostars: fossiles from a
-  past fast high density pre-collapse phase, ApJL, 748, L3 ([URL](http://iopscience.iop.org/2041-8205/748/1/L3?fromSearchPage=true))
+V. Taquet, C. Ceccarelli, C. Kahane 2012, *Formaldehyde and methanol deuteration in protostars: fossiles from a
+  past fast high density pre-collapse phase*, **ApJL**, 748, L3 ([URL](http://iopscience.iop.org/2041-8205/748/1/L3?fromSearchPage=true))
   
-V. Taquet, C. Ceccarelli, C. Kahane 2012, Multilayer modeling of grain porous surface chemistry I. The
-  GRAINOBLE code, A&A, 538, 42 ([URL](http://www.aanda.org/index.php?option=com_article&access=standard&Itemid=129&url=/articles/aa/full_html/2012/02/aa17802-11/aa17802-11.html))
+V. Taquet, C. Ceccarelli, C. Kahane 2012, *Multilayer modeling of grain porous surface chemistry I. The
+  GRAINOBLE code*, **AA**, 538, 42 ([URL](http://www.aanda.org/index.php?option=com_article&access=standard&Itemid=129&url=/articles/aa/full_html/2012/02/aa17802-11/aa17802-11.html))
