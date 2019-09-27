@@ -9,17 +9,23 @@ For a full description of the physical and chemical processes included in the mo
 
 The instructions file describes the input files needed by GRAINOBLE, how to compile and execute the code, and the routines needed to analyze and visualise the results. The log_history file gives an overview of all previous versions of the code between 2012 and 2018. 
 
-Publications: 
+### Publications: 
 
 F. Dulieu, T. Nguyen, E. Congiu, S. Baouche, V. Taquet 2019, Efficient formation route of the pre-biotic molecule formamide on interstellar dust grains, MNRAS (doi:10.1093/mnrasl/slz013)
+
 V. Taquet, K. Furuya, C. Walsh, E. F. van Dishoeck 2016, A primordial origin for molecular oxygen in comets: A chemical
   kinetics study of the formation and survival of O2 ice from clouds to disks, MNRAS, 462, 99 (doi:10.1093/mnras/stw2176)
+  
 V. Taquet, E. Wirstrom, S. B. Charnley 2016, Formation and recondensation of complex organic molecules during 
   protostellar luminosity outbursts, ApJ, 821, 46 (doi:10.3847/0004-637X/821/1/46)
+  
 V. Taquet, S. B. Charnley, O. Sipilä 2014, Multilayer Formation and Evaporation of Deuterated Ices in
   Prestellar and Protostellar Cores, ApJ, 791, 1 (doi:10.1088/0004-637X/791/1/1)
+  
 V. Taquet, P. Peters, C. Kahane, C. Ceccarelli, D. Duflot, C. Toubin, A. Faure, L. Wiesenfeld 2013, Modelling of deuterated water ice formation}, A\&A, 550, A127 (doi:10.1051/0004-6361/201220084)
+
 V. Taquet, C. Ceccarelli, C. Kahane 2012, Formaldehyde and methanol deuteration in protostars: fossiles from a
   past fast high density pre-collapse phase, ApJL, 748, L3 (doi:10.1088/2041-8205/748/1/L3)
+  
 V. Taquet, C. Ceccarelli, C. Kahane 2012, Multilayer modeling of grain porous surface chemistry I. The
   GRAINOBLE code, A&A, 538, 42 (doi:10.1051/0004-6361/201117802)
