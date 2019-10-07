@@ -29,3 +29,8 @@ V. Taquet, C. Ceccarelli, C. Kahane 2012, *Formaldehyde and methanol deuteration
   
 V. Taquet, C. Ceccarelli, C. Kahane 2012, *Multilayer modeling of grain porous surface chemistry I. The
   GRAINOBLE code*, **AA**, 538, 42 ([URL](http://www.aanda.org/index.php?option=com_article&access=standard&Itemid=129&url=/articles/aa/full_html/2012/02/aa17802-11/aa17802-11.html))
+  
+### Acknowledgments 
+
+I would like to thank the following people who helped me developing the model over the years: Cecilia Ceccarelli, Claudine Kahane, Philip Peters, Steve Charnley, Kenji Furuya, Franck Hersant, and Mathieu Van der Swaelmen. 
+
