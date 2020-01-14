@@ -1,5 +1,5 @@
 # MoMICE: Model for Multiphase Ice ChEmistry
-Public version of the MoMICE gas-grain astrochemical code
+Public version of the MoMICE gas-grain astrochemical code, expected to be released by Feb. 2020
 
 MoMICE is a chemical model that computes the temporal evolution of the abundances of chemical species in the gas phase and in interstellar ices. The approach is based on the rate equations introduced by Hasegawa et al. (1992) for a gas-grain treatment and allows you to follow the chemistry with fixed or evolving physical conditions. Among others, two of the main specifications of MOMICE is the multiphase treatment for the formation and desorption of ices and the computation of the reaction probabilities of grain surface reactions with the Eckart model from quantum chemical calculations. MOMICE is based on the GRAINOBLE code developed at IPAG between 2009 and 2012, and further modified and updated between 2013 and 2020. 
 
