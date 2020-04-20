@@ -1,4 +1,4 @@
-This notice describes the input files needed by GRAINOBLE, how to compile and execute the code, and the routines needed to analyze and visualise the results.
+This notice describes the input files needed by MOMICE_ASTRO, how to compile and execute the code, and the routines needed to analyze and visualise the results.
 
 
 ## 1. INPUT FILES
