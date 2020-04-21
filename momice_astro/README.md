@@ -1,6 +1,6 @@
 This README describes how to compile and execute the code, the input files needed by MOMICE_ASTRO, and the routine that analyzes and visualises the results.
 
-## 1. COMPILATION AND EXECUTION
+## 1. Compilation and Execution
 
 The code is written in Fortran 90, it is therefore necessary to compile its source files located in the `source` directory before running the model. 
 
@@ -14,7 +14,7 @@ The fortran executable is called by the MOMAPP python routine (`momapp.py`) also
 Once the input files are configured, the simulations can be run by executing the `momapp.py` python routine. 
 
 
-## 2. INPUT FILES
+## 2. Input files
 
 ### `momapp.in`
 
@@ -50,7 +50,7 @@ It is the main and first input file to check. It allows you to specify the physi
 
 #### PHYSICAL CONDITIONS:
 
-- Constant physical conditions. Whether or not you want to apply evolving physical conditions. If physical conditions are constant (ch_ph=1), then the following physical conditions are specified here: total time of integrations (in years), the total density of H nuclei (cm^{-3}), the gas temperature (K), the grain/ice temperature (K), the cosmic ray ionization rate zeta (s-1), the visual extinction Av (mag), the scaling factor for external radiation field G0, the "secondary" UV flux generated from the H_2 ionization by cosmic rays (cm$^{-2}$ s$^{-1}$). 
+- Constant physical conditions. Whether or not you want to apply evolving physical conditions. If physical conditions are constant (ch_ph=1), then the following physical conditions are specified here: total time of integrations (in years), the total density of H nuclei (cm<sup>-3</sup>), the gas temperature (K), the grain/ice temperature (K), the cosmic ray ionization rate zeta (s-1), the visual extinction Av (mag), the scaling factor for external radiation field G0, the "secondary" UV flux generated from the H<sub>2</sub> ionization by cosmic rays (cm<sup>-2</sup> s<sup>-1</sup>). 
 
 - Evolving physical conditions. GRAINOBLE is also able to study the chemistry for evolving physical conditions. Two options are possible: 1) An input file giving the evolution of the radius, density, (gas and grain) temperatures, visual extinction with time. For the format read by GRAINOBLE, please take a look at the example given in the folder "pays". 2) The evolution follows simple analytical evolutions (power-law or free-fall), you can specify the power-index for the evolution of the density and/or temperature.
 
