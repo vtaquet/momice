@@ -16,7 +16,7 @@ Once the input files are configured, the simulations can be run by executing the
 
 ## 2. INPUT FILES
 
-### momapp.in
+### `momapp.in`
 
 MOMAPP first reads `momapp.in` to define the type of simulation. A few parameters need to be chosen:
 
@@ -50,7 +50,7 @@ It is the main and first input file to check. It allows you to specify the physi
 
 #### PHYSICAL CONDITIONS:
 
-- Constant physical conditions. Whether or not you want to apply evolving physical conditions. If physical conditions are constant (ch_ph=1), then the following physical conditions are specified here: total time of integrations (in years), the total density of H nuclei (cm$^{-3}$), the gas temperature (K), the grain/ice temperature (K), the cosmic ray ionization rate zeta (s-1), the visual extinction Av (mag), the scaling factor for external radiation field G0, the "secondary" UV flux generated from the H_2 ionization by cosmic rays (cm$^{-2}$ s$^{-1}$). 
+- Constant physical conditions. Whether or not you want to apply evolving physical conditions. If physical conditions are constant (ch_ph=1), then the following physical conditions are specified here: total time of integrations (in years), the total density of H nuclei (cm^{-3}), the gas temperature (K), the grain/ice temperature (K), the cosmic ray ionization rate zeta (s-1), the visual extinction Av (mag), the scaling factor for external radiation field G0, the "secondary" UV flux generated from the H_2 ionization by cosmic rays (cm$^{-2}$ s$^{-1}$). 
 
 - Evolving physical conditions. GRAINOBLE is also able to study the chemistry for evolving physical conditions. Two options are possible: 1) An input file giving the evolution of the radius, density, (gas and grain) temperatures, visual extinction with time. For the format read by GRAINOBLE, please take a look at the example given in the folder "pays". 2) The evolution follows simple analytical evolutions (power-law or free-fall), you can specify the power-index for the evolution of the density and/or temperature.
 
