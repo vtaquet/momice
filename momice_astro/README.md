@@ -2,7 +2,7 @@ This README describes how to compile and execute the code, the input files neede
 
 ## 1. COMPILATION AND EXECUTION
 
-The code is written in Fortran 90, it is therefore necessary to compile its source files located in the `source` directory. 
+The code is written in Fortran 90, it is therefore necessary to compile its source files located in the `source` directory before running the model. 
 
 To compile the source code: 
 - go to the `source` directory. 
@@ -11,14 +11,14 @@ To compile the source code:
 
 The fortran executable is called by the MOMAPP python routine (`momapp.py`) also located in the `source` directory. MOMAPP reads a first input file `momapp.in` in which the user defines the type of simulation to be run and the location of input files read by MOMICE. See the next section for a description of `momapp.in` and all the input files read by MOMICE.
 
-Once the input files are configured, the MOMICE simulations can be run by executing the `momapp.py` python routine. 
+Once the input files are configured, the simulations can be run by executing the `momapp.py` python routine. 
 
 
 ## 2. INPUT FILES
 
 ### momapp.in
 
-MOMAPP first reads `momapp.in` to set the type of simulation. A few parameters need to be chosen:
+MOMAPP first reads `momapp.in` to define the type of simulation. A few parameters need to be chosen:
 
 - type of simulation: the user can choose to run 1) individual simulations with constant physical conditions, 2) simulations for evolving physical conditions as function of distance of a central source, 3) model grids in which (constant) physical conditions are explored, 4) sensitivity analyses in which the distributions of key input parameters impacts the uncertainties of the model predictions. 
 
@@ -30,33 +30,28 @@ MOMAPP first reads `momapp.in` to set the type of simulation. A few parameters n
 
 - Number of CPUs to be used for running the simulations (-1 means that all available CPUs are used).
 
-
-### input_file.in
-
-This file located in the input directory specifies the folder containing all the requested input files to check. 
-
-
-### 1.2 input_parameters.in
+### `input_parameters.in`
 
 It is the main and first input file to check. It allows you to specify the physical conditions, the grain and ice properties, the names of the chemical networks, and to choose whether you wish to run an individual model or a model grid. 
 
 #### DATA OPTIONS:
 
-- Type of calculation. This option allows you to choose between different types of calculations: 1 = one individual model, 2 = a model grid where several input parameters can be varied within a range of values specified in model_grid.in (see below for more details about this file), 3 = a set of individual models aiming to reproduce a one-dimensional evolution of the chemistry (such as a collapse model) with varying density, temperature, and visual extinction.
-- Saving results. If you want to save the results in log and binary files, say "yes" to "Save results?". 
-- Formation/destruction rates: If you want to study the formation and destruction rates of selected species, say "yes" to "Form/dest rate of specified species?". 
+- Saving results: Whether or not you want to save the results. 
+- Formation/destruction rates: Whether or not you want to save the formation and destruction rates of selected species. If so, please define the list of selected species in `reacrates.in`. 
 
 #### INPUT/OUTPUT FILES:
 
-- Location of the output directory with respect to the source folder.
+- Location of the output directory with respect to the source folder. You already defined the folder in `momapp.in`. 
 - Name of directory: By default, the name of the directory is the date and the time at which the model has been run (ex: 20130211_0956) if "date" is chosen. If you want to specify another name, please edit this line.
 - The file specifying the list of species and their initial abundances (see below for more details).
 - The file specifying the list of reactions and their properties (see below for more details).
-- The file specify the list of binding energies of surface species (see below for more details).
+- The file specifying the list of binding energies of surface species (see below for more details).
+- The file specifying the list of files that gives the temporal evolution of physical conditions as function of the distance from the central source (see below for more details).
 
 #### PHYSICAL CONDITIONS:
 
-- Constant physical conditions. If you want to use evolving physical conditions, say "yes" to "Evolution of physical conditions?" and specify the physical properties at "Evolving physical conditions" below. If a constant physical condition is chosen, this file allows to fix different physical parameters: the time of integration, density, temperatures, cosmic ray ionisation rate, visual extinction, or secondary UV flux.
+- Constant physical conditions. Whether or not you want to apply evolving physical conditions. If physical conditions are constant (ch_ph=1), then the following physical conditions are specified here: total time of integrations (in years), the total density of H nuclei (cm$^{-3}$), the gas temperature (K), the grain/ice temperature (K), the cosmic ray ionization rate zeta (s-1), the visual extinction Av (mag), the scaling factor for external radiation field G0, the "secondary" UV flux generated from the H_2 ionization by cosmic rays (cm$^{-2}$ s$^{-1}$). 
+
 - Evolving physical conditions. GRAINOBLE is also able to study the chemistry for evolving physical conditions. Two options are possible: 1) An input file giving the evolution of the radius, density, (gas and grain) temperatures, visual extinction with time. For the format read by GRAINOBLE, please take a look at the example given in the folder "pays". 2) The evolution follows simple analytical evolutions (power-law or free-fall), you can specify the power-index for the evolution of the density and/or temperature.
 
 #### GRAIN AND ICE PROPERTIES
