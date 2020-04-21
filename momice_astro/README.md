@@ -1,9 +1,37 @@
-This notice describes the input files needed by MOMICE_ASTRO, how to compile and execute the code, and the routines needed to analyze and visualise the results.
+This README describes how to compile and execute the code, the input files needed by MOMICE_ASTRO, and the routine that analyzes and visualises the results.
+
+## 1. COMPILATION AND EXECUTION
+
+The code is written in Fortran 90, it is therefore necessary to compile its source files located in the `source` directory. 
+
+To compile the source code: 
+- go to the `source` directory. 
+- type "make gfort" or "make ifort" depending on the compiler (gfortran or ifortran) you wish to use. 
+- a `momice.gfort` or `momice.ifort` executable file is created.
+
+The fortran executable is called by the MOMAPP python routine (`momapp.py`) also located in the `source` directory. MOMAPP reads a first input file `momapp.in` in which the user defines the type of simulation to be run and the location of input files read by MOMICE. See the next section for a description of `momapp.in` and all the input files read by MOMICE.
+
+Once the input files are configured, the MOMICE simulations can be run by executing the `momapp.py` python routine. 
 
 
-## 1. INPUT FILES
+## 2. INPUT FILES
 
-### 1.1 input_file.in
+### momapp.in
+
+MOMAPP first reads `momapp.in` to set the type of simulation. A few parameters need to be chosen:
+
+- type of simulation: the user can choose to run 1) individual simulations with constant physical conditions, 2) simulations for evolving physical conditions as function of distance of a central source, 3) model grids in which (constant) physical conditions are explored, 4) sensitivity analyses in which the distributions of key input parameters impacts the uncertainties of the model predictions. 
+
+- Input directory: name of the directory within the `input` folder that contains all the input files, described below.
+
+- Output directory path with respect to the source folder.
+
+- For options 2 to 4, one needs to set up a file located in the input directory and that contains the parameters of the simulations (depending on the type of simulation specified above). 
+
+- Number of CPUs to be used for running the simulations (-1 means that all available CPUs are used).
+
+
+### input_file.in
 
 This file located in the input directory specifies the folder containing all the requested input files to check. 
 
@@ -120,13 +148,6 @@ This file contains the list of species whose formation and destruction rates wil
 
 If a spatial evolution has been chosen in input\_parameters.in, the folder and the list of files giving the one-dimensional evolution of the physical conditions have to be specified in this file. The format of the input files follows the format given in the examples located in the "phys" folders. 
 
-
-## 2. COMPILATION AND EXECUTION
-
-To compile the source code: 
-- go to the source directory. 
-- type "make gfort" or "make ifort" depending on the compiler you wish to use. 
-- type "./grainoble.gfort" or "/.grainoble.ifort" depending on the selected compiler. 
 
 
 ## 3. OUTPUT ANALYSIS AND VISUALISATION
