@@ -97,7 +97,7 @@ This section allows you to switch between different chemistry options:
 
 
 
-### 1.3 species_file.in
+### `species_file.in`
 
  This file contains the species network. Each line refers to a specific species and includes: i) its name (15 caracters), its charge, its number of elements, and its initial abundance relative to H nuclei. If you add a species, please do not forget to specify the right number of elements and the charge. GRAINOBLE uses this data to check the conservation of mass and charge. Please do not forget to specify the number of species at the beginning of the file.
 The species network must respect several rules to be read correctly by the fortran code:
@@ -122,7 +122,7 @@ QO
 QCO
  
  
-### 1.4 reaction_file.in
+### `reaction_file.in`
 
  This file contains the reaction network. Each line refers to a specific reaction and includes i) up to 3 reactants (15 caracters each), ii) up to 4 products (15 caracters each); iii) 3 parameters A, B, C; iv) the reaction type, v) the range of temperatures where the reaction is considered, vi) the type of the formula. Please don't forget to specify the number of reactions at the beginning of the file.
 
@@ -139,7 +139,7 @@ For gas phase reactions (from 1 to 8), the reaction rates are computed following
 32: Surface<->mantle exchange rate following the method introduced by Hasegawa \& Herbst (1993).
 
 
-### 1.5 energy_file.in
+### `energy_file.in`
 
  This file contains the list of binding energies of surface species relative to a bare grain surface (amorphous carbon and/or silicate), amorphous water ice, H2 ice, and as a pure substrate. For most species, it also contains the references where the values are taken from. This file should be considered as a data file since it contains all possible species which are not necessarily included in the species network. However, every surface species included in the species network must be located somewhere in this file. 
 
@@ -153,7 +153,7 @@ For gas phase reactions (from 1 to 8), the reaction rates are computed following
 - Input parameters: 14 input parameters can be chosen as free parameters. For each parameter, one needs to specify the number of parameter steps as well as its extremal values. GRAINOBLE will compute all the values following linear (or logarithmic) steps. For example, if you choose 4 steps for $n_H$ between $10^3$ and $10^6$ cm$^{-3}$, GRAINOBLE will specify $n_H=10^3$, $10^4$, $10^5$, $10^6$ cm$^{-3}$. If you don't want to use a specific parameter as free, choose "0" for its number of steps and specify its value in input_parameters.in.
 
 
-### 1.7 reacrates.in
+### 1.7 `reacrates.in`
 
 This file contains the list of species whose formation and destruction rates will be computed and saved as binary files. For each species, the rates of the 30 most important reactions of formation and destruction are saved. The amount of data tends to quickly increase with the number of species, one should limit the number of species to 50.
 
