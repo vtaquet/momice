@@ -68,7 +68,7 @@ This section allows you to fix the main properties of interstellar grains and ic
 
 - Grain properties: 
 	- dust-to-gas mass ratio R<sub>dg</sub>, the default value is 1%. 
-	- grain size a<sub>d</sub>, the default value is $5 \times 10^{-2}$ \mu m.
+	- grain size a<sub>d</sub>, the default value is $$5 \times 10^{-2}$$ \mu m.
 	- volumic mass of grains rho<sub>d</sub>
 From these parameters, MOMICE determines the grain abundance and the grain cross section. In this model, only one constant grain size can be specify.
 
