@@ -30,6 +30,7 @@ MOMAPP first reads `momapp.in` to define the type of simulation. A few parameter
 
 - Number of CPUs to be used for running the simulations (-1 means that all available CPUs are used).
 
+
 ### `input_parameters.in`
 
 It is the main and first input file to check. It allows you to specify the physical conditions, the grain and ice properties, the names of the chemical networks, and to choose whether you wish to run an individual model or a model grid. 
@@ -50,16 +51,34 @@ It is the main and first input file to check. It allows you to specify the physi
 
 #### PHYSICAL CONDITIONS:
 
-- Constant physical conditions. Whether or not you want to apply evolving physical conditions. If physical conditions are constant (ch_ph=1), then the following physical conditions are specified here: total time of integrations (in years), the total density of H nuclei (cm<sup>-3</sup>), the gas temperature (K), the grain/ice temperature (K), the cosmic ray ionization rate zeta (s-1), the visual extinction Av (mag), the scaling factor for external radiation field G0, the "secondary" UV flux generated from the H<sub>2</sub> ionization by cosmic rays (cm<sup>-2</sup> s<sup>-1</sup>). 
+- Constant physical conditions. Whether or not you want to apply evolving physical conditions. If physical conditions are constant (ch_ph=1), then the following physical conditions are specified here: 
+	- total time of integrations (in years)
+	- total density of H nuclei n<sub>H</sub> (cm<sup>-3</sup>)
+	- gas temperature (K) and grain/ice temperature (K)
+	- cosmic ray ionization rate zeta (s-1)
+	- visual extinction Av (mag)
+	- scaling factor for external radiation field G0
+	- "secondary" UV flux generated from the H<sub>2</sub> ionization by cosmic rays (cm<sup>-2</sup> s<sup>-1</sup>)
 
-- Evolving physical conditions. GRAINOBLE is also able to study the chemistry for evolving physical conditions. Two options are possible: 1) An input file giving the evolution of the radius, density, (gas and grain) temperatures, visual extinction with time. For the format read by GRAINOBLE, please take a look at the example given in the folder "pays". 2) The evolution follows simple analytical evolutions (power-law or free-fall), you can specify the power-index for the evolution of the density and/or temperature.
 
 #### GRAIN AND ICE PROPERTIES
 
-This section allows you to fix the main properties of interstellar grains and ices that affect the gas-grain process and surface chemistry:
-- Grain properties (grain size, dust-to-gas mass ratio, and volumic mass of grains that determine the grain abundance and the grain cross section. At this moment, only one constant grain size can be specify.).
-- Ice properties (sticking coefficients, site size, diffusion-to-binding energy ratios). 
-- Porosity parameters. A 3D porosity treatment has been recently included. From these three input parameters (size of each square pore, fraction of the sphere occupied by pore, vacuum in the grain), GRAINOBLE computes the area of the grain surface and the exchange rate between the pores and the non-porous surface. If the grain is porous, you need to add the porous species and the exchange processes in your chemical network (see next section). 
+This section allows you to fix the main properties of interstellar grains and ices that affect the gas-grain process and surface chemistry.
+
+- Grain properties: 
+	- dust-to-gas mass ratio R<sub>dg</sub>
+	- grain size a<sub>d</sub>
+	- volumic mass of grains \rho<sub>d</sub>
+From these parameters, MOMICE determines the grain abundance and the grain cross section. In this model, only one constant grain size can be specify.
+
+- Ice properties: 
+	- site size d<sub>s</sub>
+	- sticking coefficient for species heavier than H and H<sub>2</sub>
+	- diffusion-to-binding energy ratios by distinguishing the surface and the bulk of the ice, and "light" (H, H<sub>2</sub>) and "heavy" species
+	- number of active surface monolayers and approximate number of timesteps needed to fill one monolayer
+The values of these ice parameters are extensively discussed in my thesis and in the papers. Please refer to them for the best choice.
+
+- Porosity parameters. A 3D porosity treatment is yet to be included. has been recently included. Please disregard the porosity parameters at the moment. %From these three input parameters (size of each square pore, fraction of the sphere occupied by pore, vacuum in the grain), MOMICE shall compute the area of the grain surface and the exchange rate between the pores and the non-porous surface. If the grain is porous, you need to add the porous species and the exchange processes in your chemical network (see next section). 
 
 #### MODEL SWITCHES
 
