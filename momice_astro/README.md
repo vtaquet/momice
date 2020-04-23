@@ -13,6 +13,7 @@ The fortran executable is called by the MOMAPP python routine (`momapp.py`) also
 
 Once the input files are configured, the simulations can be run by executing the `momapp.py` python routine. 
 
+***
 
 ## 2. Input files
 
@@ -68,7 +69,7 @@ This section allows you to fix the main properties of interstellar grains and ic
 - Grain properties: 
 	- dust-to-gas mass ratio R<sub>dg</sub>
 	- grain size a<sub>d</sub>
-	- volumic mass of grains \rho<sub>d</sub>
+	- volumic mass of grains rho<sub>d</sub>
 From these parameters, MOMICE determines the grain abundance and the grain cross section. In this model, only one constant grain size can be specify.
 
 - Ice properties: 
