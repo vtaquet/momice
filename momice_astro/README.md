@@ -128,7 +128,7 @@ We advise the user to use the species files available here as templates to build
  - the range of temperatures where the reaction is considered
  - the type of the formula used to compute the rate. 
 
-For gas phase reactions (from 1 to 8), the reaction rates are computed following the methodology adopted in KIDA. A description of the types and formulas can be found [here](http://kida.obs.u-bordeaux1.fr/help). In addition to the standard gas-phase reactions, GRAINOBLE takes the following processes into account: 
+For gas phase reactions (from 1 to 8), the reaction rates are computed following the methodology adopted in KIDA. A description of the types and formulas can be found [here](http://kida.astrophy.u-bordeaux.fr/help.html). In addition to the standard gas-phase reactions, GRAINOBLE takes the following processes into account: 
 - 0: Gas-grain interaction and electron-grain recombination (Rate(s<sup>-1</sup>) = A x zeta) (from Flower and Pineau des Forets 2003). 
 - 20: Accretion from gas phase to grain surfaces. A is the pre-factor constant. 
 - 14: Langmuir-Hinshelwood grain-surface chemical reactions. A is the pre-factor constant, B is the efficiency induced by the chemical desorption, C is the activation barrier for computing the transmission probability through a rectangular barrier. 
@@ -139,7 +139,7 @@ For gas phase reactions (from 1 to 8), the reaction rates are computed following
 - 27: Ice sputtering through cosmic rays, scaled on water ice efficiency measured experimentally by Dartois et al. (2015).
 - 30: Non-porous surace->Pores rate exchange. A=branching ratio. 
 - 31: Pores->Non-porous rate following the method introduced by Taquet et al. (2012). A=branching ratio. 
-- 32: Surface<->mantle exchange rate following the method introduced by Hasegawa \& Herbst (1993).
+- 32: Surface<->mantle exchange rate following the method introduced by Hasegawa & Herbst (1993).
 
 
 ### `energy_file.in`
