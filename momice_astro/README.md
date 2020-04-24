@@ -77,9 +77,10 @@ From these parameters, MOMICE determines the grain abundance and the grain cross
 	- sticking coefficient for species heavier than H and H<sub>2</sub>
 	- diffusion-to-binding energy ratios by distinguishing the surface and the bulk of the ice, and "light" (H, H<sub>2</sub>) and "heavy" species
 	- number of active surface monolayers and approximate number of timesteps needed to fill one monolayer
-The values of these ice parameters are extensively discussed in my thesis and in the papers. Please refer to them for the best choice.
+	- barrier width (in angstroms) for surface reactions and for diffusion through tunnelling if they are activated (see model switches below)
+The values of these ice parameters are extensively discussed in my thesis and in the papers listed in the README of the main MOMICE directory. Please refer to them for the best choice.
 
-- Porosity parameters. A 3D porosity treatment is yet to be included. Please disregard the porosity parameters at the moment. 
+- Porosity parameters: a 3D porosity treatment is yet to be included. Please disregard the porosity parameters at the moment. 
 
 #### MODEL SWITCHES
 
@@ -127,7 +128,7 @@ We advise the user to use the species files available here as templates to build
  - the range of temperatures where the reaction is considered
  - the type of the formula used to compute the rate. 
 
-For gas phase reactions (from 1 to 8), the reaction rates are computed following the methodology adopted in KIDA. A description of the types and formulas can be found \href{hhttp://kida.obs.u-bordeaux1.fr/help}{here}. In addition to the standard gas-phase reactions, GRAINOBLE takes the following processes into account: \\
+For gas phase reactions (from 1 to 8), the reaction rates are computed following the methodology adopted in KIDA. A description of the types and formulas can be found [here](http://kida.obs.u-bordeaux1.fr/help). In addition to the standard gas-phase reactions, GRAINOBLE takes the following processes into account: \\
 0: Gas-grain interaction and electron-grain recombination ($Rate(s^{-1}) = A \times \zeta$) (from Flower and Pineau des Forets 2003). 
 20: Accretion from gas phase to grain surfaces. A=pre-factor constant. 
 14: Langmuir-Hinshelwood grain-surface chemical reactions. 
