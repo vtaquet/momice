@@ -102,7 +102,7 @@ This section allows you to switch between different chemistry options:
 
 - ATOL0: Initial absolute tolerance set to the DLSODES solver, default value is 1e-20
 - RTOL0: Initial relative tolerance set to the DLSODES solver, default value is 1e-4
-- ITOL: default value is 2 	       	           ! ITOL: 1=atol&rtol(scalar);2=atol(vector),rtol(scalar);3=atol(scalar),rtol(vector);4=atol&rtol(vector) 
+- ITOL: default value is 2
 - ITASK: default value is 1
 
 
@@ -128,17 +128,18 @@ We advise the user to use the species files available here as templates to build
  - the range of temperatures where the reaction is considered
  - the type of the formula used to compute the rate. 
 
-For gas phase reactions (from 1 to 8), the reaction rates are computed following the methodology adopted in KIDA. A description of the types and formulas can be found [here](http://kida.obs.u-bordeaux1.fr/help). In addition to the standard gas-phase reactions, GRAINOBLE takes the following processes into account: \\
-0: Gas-grain interaction and electron-grain recombination ($Rate(s^{-1}) = A \times \zeta$) (from Flower and Pineau des Forets 2003). 
-20: Accretion from gas phase to grain surfaces. A=pre-factor constant. 
-14: Langmuir-Hinshelwood grain-surface chemical reactions. 
-21: Thermal evaporation. A=pre-factor constant. 
-22: Cosmic Ray induced general desorption following Hasegawa \& Herbst 93. A=branching ratio. 
-23: Photo-desorption by induced-CR photons + background photons coming from wavelength-dependent experimental studies (see Taquet et al. 2013). A=branching ratio. 
-26: Photodissociation/photodesorption processes coming from molecular dynamics simulations (see Taquet et al. 2012c). A=branching ratio. 
-30: Non-porous surace->Pores rate exchange. A=branching ratio. 
-31: Pores->Non-porous rate following the method introduced by Taquet et al. (2012). A=branching ratio. 
-32: Surface<->mantle exchange rate following the method introduced by Hasegawa \& Herbst (1993).
+For gas phase reactions (from 1 to 8), the reaction rates are computed following the methodology adopted in KIDA. A description of the types and formulas can be found [here](http://kida.obs.u-bordeaux1.fr/help). In addition to the standard gas-phase reactions, GRAINOBLE takes the following processes into account: 
+- 0: Gas-grain interaction and electron-grain recombination (Rate(s<sup>-1</sup>) = A x zeta) (from Flower and Pineau des Forets 2003). 
+- 20: Accretion from gas phase to grain surfaces. A is the pre-factor constant. 
+- 14: Langmuir-Hinshelwood grain-surface chemical reactions. A is the pre-factor constant, B is the efficiency induced by the chemical desorption, C is the activation barrier for computing the transmission probability through a rectangular barrier. 
+- 21: Thermal evaporation. A is the pre-factor constant. 
+- 22: Cosmic Ray induced general desorption following Hasegawa & Herbst 93. A=branching ratio. 
+- 23: Photo-desorption by secondary CR-induced photons + background photons coming from wavelength-dependent experimental studies (see Taquet et al. 2013). A=branching ratio. 
+- 26: Photodissociation/photodesorption processes coming from molecular dynamics simulations (see Taquet et al. 2013). A is the absorption cross section, B is the branching ratio between different products. 
+- 27: Ice sputtering through cosmic rays, scaled on water ice efficiency measured experimentally by Dartois et al. (2015).
+- 30: Non-porous surace->Pores rate exchange. A=branching ratio. 
+- 31: Pores->Non-porous rate following the method introduced by Taquet et al. (2012). A=branching ratio. 
+- 32: Surface<->mantle exchange rate following the method introduced by Hasegawa \& Herbst (1993).
 
 
 ### `energy_file.in`
