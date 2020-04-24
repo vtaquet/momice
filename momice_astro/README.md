@@ -68,9 +68,9 @@ This section allows you to fix the main properties of interstellar grains and ic
 
 - Grain properties: 
 	- dust-to-gas mass ratio R<sub>dg</sub>, the default value is 1%. 
-	- grain size a<sub>d</sub>, the default value is $$5 \times 10^{-2}$$ \mu m.
-	- volumic mass of grains rho<sub>d</sub>
-From these parameters, MOMICE determines the grain abundance and the grain cross section. In this model, only one constant grain size can be specify.
+	- grain size a<sub>d</sub>, the default value is 5x10<sup>-2</sup> um.
+	- volumic mass of grains rho<sub>d</sub>, the default value is 3 g cm<sup>-3</sup>
+From these parameters, MOMICE determines the grain abundance and the grain cross section. Here, only one constant grain size can be specify.
 
 - Ice properties: 
 	- site size d<sub>s</sub>
@@ -79,53 +79,53 @@ From these parameters, MOMICE determines the grain abundance and the grain cross
 	- number of active surface monolayers and approximate number of timesteps needed to fill one monolayer
 The values of these ice parameters are extensively discussed in my thesis and in the papers. Please refer to them for the best choice.
 
-- Porosity parameters. A 3D porosity treatment is yet to be included. has been recently included. Please disregard the porosity parameters at the moment. %From these three input parameters (size of each square pore, fraction of the sphere occupied by pore, vacuum in the grain), MOMICE shall compute the area of the grain surface and the exchange rate between the pores and the non-porous surface. If the grain is porous, you need to add the porous species and the exchange processes in your chemical network (see next section). 
+- Porosity parameters. A 3D porosity treatment is yet to be included. Please disregard the porosity parameters at the moment. 
 
 #### MODEL SWITCHES
 
 This section allows you to switch between different chemistry options:
-- Ice formation: old 2-phase "bulk" or "new" 3-phase multi-phase approach. In this version, the 3-phase approach follows the method introduced by Hasegawa & Herbst (1993) that allows a faster computation with respect to the approach by Taquet et al. (2012). 
-- Modified rates: One can include the modified rate approach proposed by Garrod (2008). At this moment, it's still in beta, please do not use it yet. 
-- Grain size evolution due to the growth of ice, assuming that the thickness of each monolayer is equal to the size of a site. 
-- Binding energy evolution at the surface and in the bulk as a function of the coverage of bare grain, H2, and water. 
-- Atomic hydrogen in gas phase: One can choose to keep nH(H) or X(H) constants if, for example, you're using a small chemical network which does not allow you to self consistently compute the abundance of H. 
-- H$_22$ ortho/para ratio: With the last version of the chemical network, the H2 ortho/para ratio evolves with time due to gas phase reactions. But if you use a simple chemical network, you can also choose to keep it constant in order to study its influence on the chemistry. 
-- Reaction probability: Choose "1" if the reaction rate is directly computed from the transmission probability of the reaction (Hasegawa et al. 1992 approach for rate equations). Choose "2" if the reaction rate is computed from the competition process between the transmission probability of the reaction and the diffusion rate of the reactants (Chang et al. 2007 approach for microscopic Monte-Carlo calculations).  
-- Transmission probability: Choose "1" to compute the transmission probability by assuming a rectangular barrier for all reactions (in that case, the activation energies need to be specified in the reaction network and the width of the barrier is specified just below). Choose "2" to compute the transmission probability by using the Eckart model which fits an approximate Potential Energy Surface for the reactions available in the data file "eckart\_data.in". 
-- Methanol network: Choose options "2" or "3" to use the rates deduced by Watanabe et al. (2008) from their experiments or by Caselli et al. (2002) from theoretical calculations. Read my thesis for more details. 
+- Phase: 2-phase or 3-phase approach. In the "old" 2-phase approach, the ice is considered as homogeneous whereas the 3-phase approach distinguishes the ice surface (with a specified number of monolayers) and the ice bulk mantle. The 3-phase approach follows the method introduced by Hasegawa & Herbst (1993) that allows a faster computation with respect to the approach by Taquet et al. (2012). 
+- Rmod: Modified rates. One can include the modified rate approach proposed by Garrod (2008). At this moment, it's still in beta, please do not use it yet. 
+- GSevo: Grain size evolution due to the growth of ice, assuming that the thickness of each monolayer is equal to the site size of a site. 
+- Ebevo: Binding energy evolution at the surface and in the bulk as a function of the coverage of bare grain, H2, and water. 
+- surfc: Turn on/off chemistry at the ice surface.
+- bulkc: Turn on/off chemistry in the ice bulk.
+- DiffH: Choose whether the diffusion of light particles (H) is governed by thermal hopping, quantum tunnelling, or both.
+- DiffO: Choose whether the diffusion of heavy atoms (C, N, O) is governed by thermal hopping, quantum tunnelling, or both.
+- XgasH: One can choose to keep the density or the abundance of atomic hydrogen constant if, for example, you’re using a small chemical network which does not allow you to self consistently compute the abundance of H.
+- H2opr: Whether or not keep the H<sub>2</sub> ortho/para ratio constant (if ortho/param states are included in the network).
+- Pcomp: Choose "1" if the reaction rate is directly computed from the transmission probability of the reaction (Hasegawa et al. 1992 approach for rate equations). Choose "2" if the reaction rate is computed from the competition process between the transmission probability of the reaction and the diffusion rate of the reactants (Chang et al. 2007 approach for microscopic Monte-Carlo calculations).  
+- Ptran: Choose "1" to compute the transmission probability by assuming a rectangular barrier for all reactions (in that case, the activation energies need to be specified in the reaction network and the width of the barrier is specified just below). Choose "2" to compute the transmission probability by using the Eckart model which fits an approximate Potential Energy Surface for the reactions available in the data file `eckart_data.in`. 
 
-#### NUMERICAL PARAMETERS
+#### ODE SOLVER PARAMETERS
 
+- ATOL0: Initial absolute tolerance set to the DLSODES solver, default value is 1e-20
+- RTOL0: Initial relative tolerance set to the DLSODES solver, default value is 1e-4
+- ITOL: default value is 2 	       	           ! ITOL: 1=atol&rtol(scalar);2=atol(vector),rtol(scalar);3=atol(scalar),rtol(vector);4=atol&rtol(vector) 
+- ITASK: default value is 1
 
 
 ### `species_file.in`
 
- This file contains the species network. Each line refers to a specific species and includes: i) its name (15 caracters), its charge, its number of elements, and its initial abundance relative to H nuclei. If you add a species, please do not forget to specify the right number of elements and the charge. GRAINOBLE uses this data to check the conservation of mass and charge. Please do not forget to specify the number of species at the beginning of the file.
+The species file defined in the `input_parameters.in` file lists the species included in the network, together with their number of elements, their mass, and their charge, and their initial abundance relative to the total number of H nuclei. 
+MOMICE uses this data to check the conservation of mass and charge. Please do not forget to specify the number of species at the beginning of the file.
+
 The species network must respect several rules to be read correctly by the fortran code:
-i) the name of non-porous surface species start with a J and the name of porous surface or bulk species start with a Q. At this moment, one cannot combine the 3-phase and the porosity treatment simultaneously. 
-ii) gas phase species are listed first, then the external surface species, and then the porous or bulk species. 
-iii) The list of gaseous neutral species, surface species, and porous/bulk species need to be identical. 
-iv) Gas phase species that are not considered in surface (e.g. ions) need to be included after the neutral gas phase species.  
-Example of a species network included 4 neutral species and 2 ions: 
-H 
-D 
-O 
-CO 
-H+ 
-D+ 
-JH 
-JD  
-JO 
-JCO 
-QH 
-QD 
-QO 
-QCO
- 
+- Neutral gas phase species are listed first, followed by ions, ice surface, and ice bulk species. Neutral gas phase species need to have a icy counterpart (at the surface and in the bulk if 3-phase approach is used). In other words, the list of gaseous neutral species, surface species, and porous/bulk species need to be identical. 
+- Names of surface species start with a J character and the name of bulk species start with a Q.
+
+We advise the user to use the species files available here as templates to build their own species network.
+
  
 ### `reaction_file.in`
 
- This file contains the reaction network. Each line refers to a specific reaction and includes i) up to 3 reactants (15 caracters each), ii) up to 4 products (15 caracters each); iii) 3 parameters A, B, C; iv) the reaction type, v) the range of temperatures where the reaction is considered, vi) the type of the formula. Please don't forget to specify the number of reactions at the beginning of the file.
+ This file contains the network of chemical reactions. Each line refers to a specific reaction and includes:
+ - 1 to 3 reactants (with 15 caracters each)
+ - 1 to 4 products (with 15 caracters each)
+ - 3 parameters A, B, C
+ - the type of reaction
+ - the range of temperatures where the reaction is considered
+ - the type of the formula used to compute the rate. 
 
 For gas phase reactions (from 1 to 8), the reaction rates are computed following the methodology adopted in KIDA. A description of the types and formulas can be found \href{hhttp://kida.obs.u-bordeaux1.fr/help}{here}. In addition to the standard gas-phase reactions, GRAINOBLE takes the following processes into account: \\
 0: Gas-grain interaction and electron-grain recombination ($Rate(s^{-1}) = A \times \zeta$) (from Flower and Pineau des Forets 2003). 
