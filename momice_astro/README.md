@@ -146,24 +146,30 @@ For gas phase reactions (from 1 to 8), the reaction rates are computed following
 
  This file contains the list of binding energies of surface species relative to a bare grain surface (amorphous carbon and/or silicate), amorphous water ice, H2 ice, and as a pure substrate. For most species, it also contains the references where the values are taken from. This file should be considered as a data file since it contains all possible species which are not necessarily included in the species network. However, every surface species included in the species network must be located somewhere in this file. 
 
-
-### 1.6 model_grid.in
-
- If a model grid is desired in input_parameters.in, one needs to specify this file. 
-
-- Initial abundances: Instead of using the same initial abundances for all the model grid given in the species network, the results of another model grid can be used as initial abundances for the new model grid. To use the results of another model grid, choose option "2" and specify the location and the name of input grid (relative to the root directory). Of course, the number of free parameters and the values between the input model grid and the new one need to identical.
-
-- Input parameters: 14 input parameters can be chosen as free parameters. For each parameter, one needs to specify the number of parameter steps as well as its extremal values. GRAINOBLE will compute all the values following linear (or logarithmic) steps. For example, if you choose 4 steps for $n_H$ between $10^3$ and $10^6$ cm$^{-3}$, GRAINOBLE will specify $n_H=10^3$, $10^4$, $10^5$, $10^6$ cm$^{-3}$. If you don't want to use a specific parameter as free, choose "0" for its number of steps and specify its value in input_parameters.in.
-
-
-### 1.7 `reacrates.in`
+### `reacrates.in`
 
 This file contains the list of species whose formation and destruction rates will be computed and saved as binary files. For each species, the rates of the 30 most important reactions of formation and destruction are saved. The amount of data tends to quickly increase with the number of species, one should limit the number of species to 50.
 
 
-### 1.8 spat_evol.in
+### `spat_evol.in`
 
-If a spatial evolution has been chosen in input\_parameters.in, the folder and the list of files giving the one-dimensional evolution of the physical conditions have to be specified in this file. The format of the input files follows the format given in the examples located in the "phys" folders. 
+If a spatial evolution is chosen in the `momapp.in` input file (as type of simulation 2), the folder and the list of files giving the one-dimensional evolution of the physical conditions have to be specified in this file. The format of the input files follows the format given in the examples located in the "phys" folders. 
+
+
+### `model_grid.in`
+
+ If a model grid is chosen in the `momapp.in` input file (as type of simulation 3), one needs to specify a file with the name defined in `momapp.in`. This file lists the physical parameters whose ranges of values are explored, with four columns: 
+ - name of parameter among the followinng physical parameters: nH (total density in cm<sup>-3</sup>), Tg (gas temperature in K), Td (dust/ice temperature in K), Av (visual extinction in mag), UV (flux of secondary photons in cm<sup>-2</sup>s<sup>-1</sup>), CR (cosmic ray ionization rate in s<sup>-1</sup>)
+- number of values 
+- minimal value
+- maximal value
+
+### `sensitivity.in`
+
+If a sensitivity analysis in the `momapp.in` input file (as type of simulation 4), one needs to specify a file with the name defined in `momapp.in`. This file first sets the number of models to be run, and the distribution followed by the parameters (either `uniform` or `normal` distribution). The user then defines the parameters whose values are explored with four columns:
+- name of parameter among the following chemical and surface parameters: Ed (diffusion-to-binding energy ratio), Eb (binding energy factor with respect to those defined in the energy data file), Ea (activation barrier factor of surface reactions with respect to those defined in the reaction file)
+- the mean of the distribution
+- the standard deviation (for a gaussian distribution) or the range (for a uniform distribution)
 
 
 
