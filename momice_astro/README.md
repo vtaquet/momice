@@ -171,7 +171,7 @@ If a sensitivity analysis in the `momapp.in` input file (as type of simulation 4
 - the mean of the distribution
 - the standard deviation (for a gaussian distribution) or the range (for a uniform distribution)
 
-
+***
 
 ## 3. Output analysis and Visualisation
 
@@ -212,6 +212,7 @@ If typeout=4, MOMAN allows you to visualise the result of a sensitivity analysis
 
 In addition, figures showing the distributions of input parameter values are shown in order to check that they correctly follow the desired distribution (normal or uniform). 
 
+***
 
 ## 4. Data files
 
