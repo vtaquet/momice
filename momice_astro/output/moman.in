@@ -1,0 +1,20 @@
+# Output 
+typeout  = 3 										   # Type of output: 1) individual models, 2) spatial evolution, 3) model grid, 4) sensitivity analysis 
+outdir   = ../../momice_results/                       # Location of the output directory where model folders are saved relative to current one
+outmod   = example_grid                                # Name of the folder(s) to read (one or several folders if 1) chosen, only one otherwise)
+suffix   = comp_                                       # Name of the prefix of figures that compare different models
+plotreac = no 										   # Plot the rates of reactions? 'yes' or 'no'
+# Species 
+refsp    = CO                           			   # Reference species for abundance ratios
+species  = H2O CO CO2 H2CO CH3OH O2					   # Name of the species to show in plots 
+# X and Y axes
+invtime  = no                                          # Inverse time on x-axis? 'yes' or 'no' (useful for collapse models)
+timein   = 0   		   								   # Initial time if different from 0 (in yr)
+timeplot = 1e5 9e5       							   # Timesteps to plot the distributions, spatial or parameter evolutions (for typeout 2 to 4)
+logabs   = log                                         # Logarithmic (log) or linear (lin) evolution of time on x-axis  
+*
+
+
+
+
+
