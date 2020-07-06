@@ -171,6 +171,12 @@ If a sensitivity analysis in the `momapp.in` input file (as type of simulation 4
 - the mean of the distribution
 - the standard deviation (for a gaussian distribution) or the range (for a uniform distribution)
 
+### The two chemical networks
+
+With this version of MOMICE are provided two chemical networks in the input directory:
+- `network1`, a simple chemical network without gas phase chemistry. It only contains gas-grain chemical processes and surface chemical reactions that form the major ice components (H$_2$O, CO, CO$_2$, H$_2$CO, CH$_3$OH, NH$_3$, CH$_4$).
+- `network2`, a more sophisticated chemical network based on the KIDA database for the gas phase network and an extensive surface network forming simple and more complex molecules. For a more complete description, please go to the end of the `re_network2.in` file.
+
 ***
 
 ## 3. Output analysis and Visualisation
@@ -198,7 +204,6 @@ If typeout=1, MOMAN creates the pdf files in the directory of each selected mode
 
 If typeout=2, MOMAN allows you to follow the chemical evolution in a one-dimensional dimension. outdir, specified in `moman.in`, determines the location of the set of output folders and where the `spatlog.out` file is located. 
 MOMICE generates a set of pdf and ascii files in different folders showing the evolution of the chemical abundances as function of the distance from the central source for the different times chosen in `moman.in`. 
-
 
 ### Model grid
 
