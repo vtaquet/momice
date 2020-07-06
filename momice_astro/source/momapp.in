@@ -1,0 +1,12 @@
+typesimu = 3 			 				   # Type of simulation: 1=individual model, 2=spatial evolution, 3=model grid, 4=sensitivity analysis
+inpdir   = network1                        # Directory within input folder where are located all input files 
+outdir   = ../../momice_results/example_grid        # Location of the output directory where model folders are saved relative to current one
+nameinp2 = spat_evol.in  				   # For typesimu=2, file (in inpdir directory) giving the folder and list of files
+nameinp3 = model_grid.in 				   # For typesimu=3, file (in inpdir directory) listing the input parameters to vary
+nameinp4 = sensitivity.in 				   # For typesimu=4, file (in inpdir directory) listing the input parameters to vary
+Ncpus    = 4             				   # Number of cpus to use
+*
+
+
+
+
