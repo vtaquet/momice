@@ -1,0 +1,69 @@
+------------------------------------------------------------------------------------------------------------------------
+DATA OPTIONS
+------------------------------------------------------------------------------------------------------------------------
+save  = 1	       	           ! Save results: 1=yes, 2=no
+Rrate = 2                      ! Compute the formation/destruction rates: 1=yes, 2=no (if yes, modify reacrates.in) 
+------------------------------------------------------------------------------------------------------------------------
+INPUT AND OUTPUT FILES
+------------------------------------------------------------------------------------------------------------------------
+../../momice_results/test_public/                                                          ! Location of the output directory wrt source folder
+test_reac                                                                                     ! Name of the output directory ("date": name=date)
+sp_network1.in                                                                                ! Species filename   
+re_network1.in                                                                                ! Chemical network filename  
+en_network1.in                                                                                ! Energy filename
+spat_evol.in                                                                                  ! Physical evolution filename if ch_ph = 2
+------------------------------------------------------------------------------------------------------------------------
+PHYSICAL CONDITIONS
+------------------------------------------------------------------------------------------------------------------------
+ch_ph = 1                      ! Physical conditions: 1=constant, 2=evolution (specify namefile above)
+tmax  = 1.0000000D+06 	       ! Time of integration (years) 
+nHini = 2.0000000D+04 	       ! Fixed total density nH=n(H)+2*n(H2) (cm-3) 
+Tgini = 1.0000000E+01  	       ! Fixed temperature Tgas (K)
+Tdini = 1.0000000E+01  	       ! Fixed temperature Tdust (K)
+zeta  = 1.0000000D-17  	       ! Cosmic ray ionization rate Zeta (s-1) 
+Avini = 2.0000000D+01  	       ! Visual extinction Av (mag)
+G0    = 1.0000000D+00  	       ! Scaling factor for external radiation field G0
+CRUV  = 1.0000000D+04  	       ! UV flux from H2 ionization by CRs (cm-2.s-1)
+------------------------------------------------------------------------------------------------------------------------
+GRAIN AND ICE PROPERTIES
+------------------------------------------------------------------------------------------------------------------------
+Rdg   = 1.0000000D-02  	       ! Dust-to-gas mass ratio
+ad    = 5.0000000D-02  	       ! Size of the grains (um)
+rhod  = 3.0000000D+00  	       ! Volumic mass of grains (g.cm-3)
+ds    = 3.1600000D+00  	       ! Size of a grain site (A)
+Sheav = 1.0000000D+00  	       ! Sticking coefficient for heavy species (for H, taken from Tielens05)
+EdHs  = 6.5000000D-01  	       ! Diffusion energy / Desorption energy ratio at the surface for H
+EdHb  = 6.5000000D-01  	       ! Diffusion energy / Desorption energy ratio in the bulk for H 
+EdOts = 1.0000000D+00  	       ! Diffusion energy / Desorption energy ratio at the surface for other species
+EdOtb = 1.0000000D+00  	       ! Diffusion energy / Desorption energy ratio in the bulk for other species
+Nactl = 4.0000000D+00  	       ! Number of active layers at the surface (if 3 phase model is chosen)
+Nslay = 10	       	           ! Approximate number of timesteps for the formation of each layer
+Wreac = 1.0000000D+00  	       ! Barrier width (in A) of surface reactions if rectangular barrier is chosen
+Wdiff = 1.0000000D+00  	       ! Barrier width (in A) for diffusion through quantum tunnelling
+Slat  = 2.0000000D+01  	       ! Lateral size of a square pore (in number of pores)
+Fpore = 0.0000000D-01  	       ! Fraction of the grain sphere that are in the pores
+Fvacu = 0.0000000D-01  	       ! Fraction of the vacuum occupied in the grain: Vvacuum/Vgrain
+------------------------------------------------------------------------------------------------------------------------
+MODEL SWITCHES
+------------------------------------------------------------------------------------------------------------------------
+Phase = 2 	       	           ! Formation of ices: 1=2-phase, 2=3-phase
+Rmod  = 2 	       	           ! Modified rates (following Garrod 2008): 1=yes, 2=no (still in beta, do not use it yet)
+GSevo = 1	       	           ! Evolution of grain size with the mantle formation: 1=yes, 2=no
+Ebevo = 1	       	           ! Binding energy evolution within a layer: 1=yes, 2=no      
+surfc = 1                      ! Surface chemistry: 1=on, 2=off
+bulkc = 1                      ! Bulk chemistry: 1=on, 2=off
+DiffH = 1	       	           ! Diffusion of H atoms via 1=thermal hopping, 2=tunnelling, or 3=both
+DiffO = 1	       	           ! Diffusion of C, N, O atoms via 1=thermal hopping, 2=tunnelling, or 3=both
+XgasH = 3	                   ! Atomic hydrogen in gas phase: nH=cst(1), X=cst(2) or free(3)
+H2opr = 2              	       ! H2 ortho/para ratio: 1=fixed, 2=free
+Pcomp = 1              	       ! Reaction proba given by 1=the barrier, 2=competition process
+Ptran = 1              	       ! Transmission proba computed with (when available) 1=rect barrier, 2=Eckart model
+------------------------------------------------------------------------------------------------------------------------
+ODE SOLVER PARAMETERS
+------------------------------------------------------------------------------------------------------------------------
+ATOL0 = 1.0000000D-20	       ! ATOL0: initial absolute tolerance
+RTOL0 = 1.0000000D-04	       ! RTOL0: initial relative torelance
+ITOL  = 2 	       	           ! ITOL: 1=atol&rtol(scalar);2=atol(vector),rtol(scalar);3=atol(scalar),rtol(vector);4=atol&rtol(vector) 
+ITASK = 1 	       	           ! ITASK: 1=default
+
+

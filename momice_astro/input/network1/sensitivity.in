@@ -1,0 +1,5 @@
+100       # Nmodels
+normal    # distribution: uniform or normal
+Ed all 0.5 0.01
+Eb all 1.0 0.1
+Ea all 1.0 0.1

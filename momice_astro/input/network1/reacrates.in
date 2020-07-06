@@ -1,0 +1,23 @@
+! Number of species (<50)
+10
+! List of species
+H 
+O  
+H2  
+OH 
+H2O 
+CO    
+O2    
+HO2    
+H2O2    
+HCO  
+H2CO    
+CH2OH  
+CH3O   
+CH3OH   
+O3  
+CO2  
+OCO  
+tHOCO  
+cHOCO   
+HCOOH  
