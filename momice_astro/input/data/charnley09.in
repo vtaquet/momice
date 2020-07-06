@@ -1,0 +1,46 @@
+-------------------------------------
+ Rate file for SAK-II chemistry
+-------------------------------------
+ 1    H       CO      HCO             1000.0  1.0E+00
+ 2    H       HCO     H2CO               0.0  5.0E-02
+ 3    H       HCO     CO                 0.0  9.5E-01
+ 4    H       H2CO    CH2OH           1000.0  5.0E-01
+ 5    H       H2CO    HCO             1000.0  5.0E-01
+ 6    H       CH2OH   CH3OH              0.0  5.0E-01
+ 7    H       CH2OH   H2CO               0.0  5.0E-01
+ 8    H       CH3OH   CH2OH           1800.0  1.0E+00
+ 9    H       O       OH                 0.0  1.0E+00
+ 10   H       OH      H2O                0.0  1.0E+00
+ 11   H       C       CH                 0.0  1.0E+00
+ 12   H       CH      CH2                0.0  1.0E+00
+ 13   H       CH2     CH3                0.0  1.0E+00
+ 14   H       CH3     CH4                0.0  1.0E+00
+ 15   H       HCCO    CH2CO              0.0  1.0E+00
+ 16   H       CH2CO   CH2CHO          1000.0  1.0E+00
+ 17   H       CH2CHO  CH3CHO             0.0  1.0E+00
+ 18   H       CH3CHO  CH3CHOH         1500.0  1.0E+00
+ 19   H       CH3CHOH C2H5OH             0.0  1.0E+00
+ 20   H       CCCHO   HCCCHO             0.0  1.0E+00
+ 21   H       HCCCHO  CH2CCHO         1000.0  1.0E+00
+ 22   H       CH2CCHO MCHCHO             0.0  1.0E+00
+ 23   H       MCHCHO  MHCHCHO         1000.0  1.0E+00
+ 24   H       MHCHCHO C2H5CHO            0.0  1.0E+00
+ 25   H       C2H5CHO ECHOH           1000.0  1.0E+00
+ 26   H       ECHOH   EMOH               0.0  1.0E+00
+ 27   H       CO2     OCOH            1800.0  0.0E+00
+ 28   H       OCOH    HCOOH              0.0  1.0E+00
+ 29   H       HCOOH   CHOHOH          1800.0  1.0E+00
+ 30   H       CHOHOH  CH2OHOH            0.0  1.0E+00
+ 31   O       O       O2                 0.0  1.0E+00
+ 32   O       C       CO                 0.0  1.0E+00
+ 33   O       CO      CO2             1000.0  0.0E+00
+ 34   C       O2      CO      O          0.0  1.0E+00
+ 35   C       OH      CO      H          0.0  1.0E+00
+ 36   C       HCO     HCCO               0.0  1.0E+00
+ 37   C       HCCO    CCCHO              0.0  1.0E+00
+ 38   O       HCO     OCOH               0.0  2.5E-01
+ 39   O       HCO     CO2                0.0  7.5E-01
+ 9999
+ - must treat H + H --> H2 in the code
+
+x,i4,x,a7,x,a7,x,a7,x,a7,x,f6.1,2x,1pe8.2

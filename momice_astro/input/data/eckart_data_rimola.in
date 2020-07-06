@@ -1,0 +1,75 @@
+!react1   react2    react3    prod1     prod2     Vf (K)    Vr (K)    wf (cm-1)
+JCO       JH                  JHCO                1.106E+03 1.129E+04 5.697E+02 
+JH2CO     JH                  JCH3O               1.299E+03 1.588E+04 7.013E+02
+JH2CO     JH                  JH3CO               1.299E+03 1.588E+04 7.013E+02
+JH2CO     JH                  JCH2OH              9.074E+03 2.753E+04 1.862E+03 
+JCO       JD                  JDCO                1.710E+03 1.098E+04 7.936E+02 
+JHCO      JH                  JHCOH               9.968E+03 2.414E+04 1.275E+03
+JHCOH                         JH2CO               1.685E+04 4.340E+04 2.152E+03
+JH2CO     JH                  JHCO      JH2       9.773E+03 1.299E+04 5.688E+02
+JH2CO     JD                  JCH2DO              2.156E+03 2.705E+04 1.037E+03
+JH2CO     JD                  JHCO      JHD       1.645E+03 1.328E+04 4.357E+02
+JH2CO     JD                  JHDCO     JH        1.645E+03 1.328E+04 4.357E+02
+JHDCO     JH                  JCH2DO              2.396E+03 2.729E+04 1.037E+03
+JHDCO     JH                  JHCO      JHD       2.028E+03 1.279E+04 5.168E+02
+JHDCO     JH                  JDCO      JH2       2.028E+03 1.306E+04 5.168E+02
+JHDCO     JD                  JCHD2O              2.156E+03 2.705E+04 1.037E+03
+JHDCO     JD                  JHCO      JD2       1.886E+03 1.333E+03 4.046E+02
+JHDCO     JD                  JDCO      JHD       1.886E+03 1.315E+04 4.046E+02
+JHDCO     JD                  JD2CO     JH        1.886E+03 1.315E+04 4.046E+02
+JD2CO     JH                  JCHD2O              2.396E+03 2.729E+04 1.037E+03
+JD2CO     JH                  JDCO      JHD       2.031E+03 1.258E+04 5.160E+02
+JD2CO     JD                  JCD3O               2.156E+03 2.705E+04 1.037E+03
+JD2CO     JD                  JDCO      JD2       1.922E+03 1.297E+04 4.037E+02
+JCH3O                         JCH2OH              1.596E+04 2.102E+04 1.983E+03 
+JCH3OH    JH                  JCH2OH    JH2       4.307E+03 8.269E+03 1.802E+03 
+JCH3OH    JD                  JCH2OH    JHD       3.887E+03 8.287E+03 1.792E+03
+JCD3OD    JH                  JCD2OD    JHD       4.909E+03 8.086E+03 1.345E+03 
+JCD3OD    JD                  JCD2OD    JD2       4.471E+03 8.166E+03 1.332E+03
+JCH3OH    JH                  JCH3O     JH2       6.640E+03 1.060E+04 1.802E+03 
+JOH       JoH2                JH2O      JH        2.935E+03 1.021E+04 1.293E+03 
+JOH       JpH2                JH2O      JH        2.935E+03 1.021E+04 1.293E+03 
+JOH       JH2                 JH2O      JH        2.935E+03 1.021E+04 1.293E+03 
+JOH       JHD                 JH2O      JD        2.855E+03 9.396E+03 1.259E+03
+JOH       JHD                 JHDO      JH        3.051E+03 1.051E+04 9.704E+02
+JOH       JoD2                JHDO      JD        3.026E+03 9.556E+03 9.553E+02
+JOH       JpD2                JHDO      JD        3.026E+03 9.556E+03 9.553E+02
+JOH       JD2                 JHDO      JD        3.026E+03 9.556E+03 9.553E+02
+JOD       JoH2                JHDO      JH        2.789E+03 1.025E+04 1.293E+03
+JOD       JpH2                JHDO      JH        2.789E+03 1.025E+04 1.293E+03
+JOD       JH2                 JHDO      JH        2.789E+03 1.025E+04 1.293E+03
+JOD       JHD                 JD2O      JH        2.900E+03 1.087E+04 9.701E+02
+JOD       JHD                 JHDO      JD        2.703E+03 9.736E+03 1.258E+03
+JOD       JoD2                JD2O      JD        2.870E+03 1.034E+04 9.551E+02
+JOD       JpD2                JD2O      JD        2.870E+03 1.034E+04 9.551E+02
+JOD       JD2                 JD2O      JD        2.870E+03 1.034E+04 9.551E+02
+JH2O2     JH                  JH2O      JOH       2.508E+03 3.636E+04 1.054E+03
+JH2O2     JD                  JHDO      JOH       2.355E+03 3.712E+04 8.437E+02
+JHDO2     JH                  JHDO      JOH       2.523E+03 3.624E+04 1.053E+03
+JHDO2     JH                  JH2O      JOD       2.524E+03 3.606E+04 1.053E+03
+JHDO2     JD                  JHDO      JOD       2.369E+03 3.682E+04 8.466E+02
+JHDO2     JD                  JD2O      JOH       2.367E+03 3.702E+04 8.461E+02
+JD2O2     JH                  JD2O      JOH       2.540E+03 3.594E+04 1.052E+03
+JD2O2     JD                  JD2O      JOD       2.384E+03 3.672E+04 8.429E+02
+JCO       JOH                 JCO2      JH        2.850E+02 1.305E+04 2.610E+02
+JCO       JOH                 JtHOCO              2.850E+02 1.305E+04 2.610E+02
+JCO       JOH                 JcHOCO              2.128E+03 1.405E+04 3.790E+02
+JOCO      JH                  JtHOCO              7.754E+02 1.305E+04 2.610E+02
+JOCO      JH                  JcHOCO              2.618E+03 1.405E+04 3.790E+02
+JtHOCO                        JCO       JOH       1.305E+04 2.850E+02 2.610E+02
+JtHOCO                        JcHOCO              4.114E+03 3.272E+03 5.840E+02
+JcHOCO                        JtHOCO              3.272E+03 4.114E+03 5.840E+02
+JcHOCO                        JCO2      JH        1.244E+04 1.290E+04 2.053E+03
+JCO       JOD                 JCO2      JD        1.213E+02 1.322E+04 2.600E+02
+JCO       JOD                 JtDOCO              1.213E+02 1.322E+04 2.600E+02
+JCO       JOD                 JcDOCO              1.964E+03 1.417E+04 3.780E+02
+JOCO      JD                  JtDOCO              7.267E+02 1.322E+04 2.600E+02
+JOCO      JD                  JcDOCO              2.569E+03 1.417E+04 3.780E+02
+JtDOCO                        JCO       JOD       1.322E+04 1.213E+02 4.630E+02
+JtDOCO                        JcDOCO              4.238E+03 3.343E+03 4.630E+02
+JcDOCO                        JtDOCO              3.343E+03 4.238E+03 4.630E+02
+JcDOCO                        JCO2      JD        1.323E+04 1.267E+04 1.632E+03
+JCN       JH2O                JHCNOH              1.034E+03 1.126E+04 6.562E+02
+JHCNOH    JH2O                JNH2CO    JH2O      2.770E+02 1.084E+04 4.495E+02
+JNH2CO    JH2O                JNH2CHO   JOH       1.334E+04 5.497E+03 1.190E+03
+

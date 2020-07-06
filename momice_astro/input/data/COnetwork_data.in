@@ -1,0 +1,30 @@
+! List of reactions of the CO network and having a barrier
+! - A: rates relative to CO+H deduced from Watanabe's experiments
+! - B: activation energies relative to CO+H deduced by Caselli et al. (2002) 
+!react1   react2    react3    prod1     prod2     A          B
+JCO       JH                  JHCO                1.000E+00 1.000E+00 
+JCO       JD                  JDCO                1.000E-01 0.930E+00 
+JH2CO     JH                  JCH3O               5.000E-01 1.000E+00
+JH2CO     JH                  JCH2OH              0.000E-01 1.000E+09
+JH2CO     JH                  JHCO      JH2       0.000E-01 1.000E+09
+JH2CO     JD                  JCH2DO              5.000E-02 0.799E+00
+JH2CO     JD                  JHCO      JHD       4.850E-01 1.000E+09
+JH2CO     JD                  JHDCO     JH        4.850E-01 1.000E+09 
+JHDCO     JH                  JCH2DO              5.800E-01 0.965E+00 
+JHDCO     JH                  JHCO      JHD       3.800E-01 1.000E+09 
+JHDCO     JH                  JDCO      JH2       0.000E-01 1.000E+09
+JHDCO     JD                  JCHD2O              5.800E-02 0.758E+00
+JHDCO     JD                  JHCO      JD2       0.000E-01 1.000E+09 
+JHDCO     JD                  JDCO      JHD       4.850E-01 1.000E+09
+JHDCO     JD                  JD2CO     JH        4.850E-01 1.000E+09
+JD2CO     JH                  JCHD2O              6.600E-01 0.925E+00
+JD2CO     JH                  JDCO      JHD       3.800E-01 1.000E+09
+JD2CO     JD                  JCD3O               6.600E-02 0.713E+00 
+JD2CO     JD                  JDCO      JD2       0.000E-01 1.000E+09
+JCH3OH    JD                  JCH2OH    JHD       1.500E-00 1.000E+09
+JCH2DOH   JD                  JCHDOH    JHD       1.000E-00 1.000E+09
+JCHD2OH   JD                  JCD2OH    JHD       7.800E-01 1.000E+09
+JCH3OD    JD                  JCH2OD    JHD       1.500E-00 1.000E+09
+JCH2DOD   JD                  JCHDOD    JHD       1.000E-00 1.000E+09
+JCHD2OD   JD                  JCD2OD    JHD       7.800E-01 1.000E+09  
+JCHD2OD   JD                  JCD2OD    JHD       7.800E-01 1.000E+09
